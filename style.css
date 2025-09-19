@@ -1,30 +1,276 @@
-/* Reset básico */
+/* RESET BÁSICO */
 * {margin:0; padding:0; box-sizing:border-box;}
-body {font-family: 'Roboto', Arial, sans-serif; line-height:1.6; background:#f8f9fa; color:#0b1220;}
-a {text-decoration:none;}
+body {
+    font-family: 'Roboto', Arial, sans-serif;
+    line-height:1.6;
+    background:#000000; /* negro oscuro */
+    color:#ffffff;
+}
+a {text-decoration:none; color:#ff4c00; transition:0.3s;}
+a:hover {color:#ff9990;}
 
-/* Header */
-header {background:#0b1220; color:white; padding:20px; text-align:center;}
-header img {max-height:80px; display:block; margin:0 auto 10px;}
-nav a {color:white; margin:0 15px; font-weight:600; transition:0.3s;}
-nav a:hover {color:#b71c1c;}
+/* HEADER */
+header {
+    background:#000000;
+    color:#ffffff;
+    padding:40px 20px;
+    text-align:center;
+}
+header img {
+    max-height:100px;
+    display:block;
+    margin:0 auto 15px;
+}
+header h1 {
+    font-size:2.5rem;
+    margin-bottom:10px;
+    font-weight:700;
+    color:#ff4c00; /* rojo bermellón */
+}
+header p {
+    font-size:1.2rem;
+    color:#dddddd;
+}
 
-/* Secciones */
-section {padding:50px 20px; max-width:900px; margin:auto;}
-h1,h2 {color:#0b1220; margin-bottom:20px; text-align:center;}
-p, ul, ol {margin-bottom:20px;}
+/* SECCIONES */
+section {
+    padding:60px 20px;
+    max-width:1000px;
+    margin:auto;
+}
+h2 {
+    color:#ff4c00;
+    margin-bottom:40px;
+    text-align:center;
+    font-size:2rem;
+}
 
-/* Botones */
-.btn {display:inline-block; margin:10px 5px; padding:12px 20px; background:#0b1220; color:white; border-radius:8px; font-weight:600; transition:0.3s;}
-.btn:hover {background:#b71c1c;}
+/* TARJETAS DE SERVICIOS */
+.servicios-container {
+    display:flex;
+    flex-wrap:wrap;
+    justify-content:center;
+    gap:25px;
+    margin-top:30px;
+}
+.servicio-card {
+    background:#1a1a1a; /* gris oscuro sobre negro */
+    border:2px solid #ff4c00;
+    border-radius:12px;
+    padding:25px;
+    max-width:300px;
+    text-align:center;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+.servicio-card h3 {
+    color:#ff4c00;
+    margin-bottom:15px;
+    font-size:1.4rem;
+}
+.servicio-card p {
+    color:#cccccc;
+    font-size:1rem;
+    line-height:1.5;
+}
+.servicio-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(255,76,0,0.5);
+}
 
-/* Formularios */
-form {background:white; padding:30px; border-radius:10px; box-shadow:0 4px 8px rgba(0,0,0,0.1);}
-label {display:block; margin:15px 0 5px; font-weight:600;}
-input, textarea {width:100%; padding:10px; border:1px solid #ccc; border-radius:5px;}
-textarea {resize:vertical;}
-button {margin-top:20px; background:#0b1220; color:white; padding:12px; border:none; border-radius:8px; font-weight:600; cursor:pointer;}
-button:hover {background:#b71c1c;}
+/* BOTONES ASESORÍA */
+.botones-asesoria {
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    gap:20px;
+    margin-top:50px;
+}
+.btn-rojo {
+    background:#ff4c00;
+    color:white;
+    padding:15px 25px;
+    border-radius:8px;
+    font-weight:600;
+    text-decoration:none;
+    font-size:1.2rem;
+    transition:0.3s;
+}
+.btn-rojo:hover {
+    background:#b71c1c;
+}
 
-/* Footer */
-footer {background:#f2f2f2; text-align:center; padding:20px; margin-top:40px; color:#555;}
+/* FORMULARIO MEDICIONES */
+form {
+    max-width:600px;
+    margin:40px auto;
+    display:flex;
+    flex-direction:column;
+    gap:15px;
+}
+form label {
+    color:#ff4c00;
+    font-weight:600;
+}
+form input, form textarea {
+    padding:12px;
+    border-radius:8px;
+    border:1px solid #ff4c00;
+    background:#1a1a1a;
+    color:#ffffff;
+}
+form input:focus, form textarea:focus {
+    outline:none;
+    border-color:#b71c1c;
+}
+form button {
+    width:200px;
+    align-self:center;
+}
+
+/* CURSOS Y MASTER CLASS */
+.curso-card {
+    background:#1a1a1a;
+    border:2px solid #ff4c00;
+    border-radius:12px;
+    padding:25px;
+    margin:20px auto;
+    max-width:700px;
+    text-align:center;
+}
+.curso-card h3 {
+    color:#ff4c00;
+    margin-bottom:15px;
+}
+.curso-card p {
+    color:#cccccc;
+    margin-bottom:20px;
+}
+.curso-card a {
+    display:inline-block;
+    background:#ff4c00;
+    color:white;
+    padding:12px 25px;
+    border-radius:8px;
+    font-weight:600;
+    text-decoration:none;
+    transition:0.3s;
+}
+.curso-card a:hover {background:#b71c1c;}
+
+/* CONTACTO */
+#contacto {
+    text-align: center; /* centramos todo */
+    padding: 60px 20px;
+}
+#contacto h2 {
+    color:#ff4c00;
+    font-size:2rem;
+    margin-bottom:20px;
+}
+#contacto p {
+    font-size:1.1rem;
+    color:#dddddd;
+    margin:10px 0;
+}
+#contacto a {
+    color:#ff4c00;
+    font-weight:600;
+}
+#contacto a:hover {
+    color:#ff9990;
+}
+
+/* RESALTAR COMUNIDAD */
+.comunidad {
+    background:#1a1a1a; /* gris oscuro para destacar */
+    border:2px solid #ff4c00;
+    border-radius:12px;
+    padding:25px;
+    margin-top:30px;
+    max-width:700px;
+    margin-left:auto;
+    margin-right:auto;
+    font-size:1.1rem;
+    line-height:1.5;
+}
+.comunidad p {
+    margin-bottom:15px;
+}
+.comunidad a {
+    display:inline-block;
+    margin-top:10px;
+    background:#ff4c00;
+    color:white;
+    padding:12px 20px;
+    border-radius:8px;
+    text-decoration:none;
+    font-weight:600;
+    transition:0.3s;
+}
+.comunidad a:hover {
+    background:#b71c1c;
+}
+
+/* FOOTER */
+footer {
+    background:#111111;
+    text-align:center;
+    padding:25px;
+    margin-top:50px;
+    color:#aaaaaa;
+    font-size:0.9rem;
+}
+
+/* RESPONSIVE */
+@media(max-width:900px){
+    .servicios-container {flex-direction:column; align-items:center;}
+    .botones-asesoria {flex-direction:column;}
+}
+@media(max-width:600px){
+    header h1 {font-size:2rem;}
+    h2 {font-size:1.7rem;}
+}
+/* GRID DE CURSOS */
+.grid-cursos {
+    display:grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap:25px;
+    margin-top:30px;
+}
+
+/* MODAL */
+.modal {
+    display:none;
+    position:fixed;
+    z-index:1000;
+    left:0;
+    top:0;
+    width:100%;
+    height:100%;
+    overflow:auto;
+    background-color: rgba(0,0,0,0.8);
+}
+.modal-content {
+    background:#1a1a1a;
+    margin:10% auto;
+    padding:30px;
+    border:2px solid #ff4c00;
+    border-radius:12px;
+    max-width:600px;
+    color:#ffffff;
+    text-align:center;
+    position:relative;
+}
+.modal-content h3 {color:#ff4c00; margin-bottom:15px;}
+.modal-content p {margin-bottom:20px; color:#cccccc;}
+.modal-content .btn-rojo {margin-top:10px;}
+.close {
+    position:absolute;
+    top:15px;
+    right:20px;
+    color:#ff4c00;
+    font-size:28px;
+    font-weight:bold;
+    cursor:pointer;
+}
+.close:hover {color:#b71c1c;}
