@@ -5,27 +5,130 @@
   <meta name="viewport" content="width=device-width,initial-scale=1"/>
   <title>Capacitaciones Virtuales - ISMAA SERVICIOS</title>
   <link rel="stylesheet" href="style.css"/>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+  <style>
+    body {font-family:'Roboto',Arial,sans-serif; background:#000; color:#fff; line-height:1.6;}
+    header {background:#000; text-align:center; padding:40px 20px;}
+    header img {max-height:100px; margin:0 auto 15px; display:block;}
+    header h1 {font-size:2.5rem; color:#ff4c00; margin-bottom:10px;}
+    header p {color:#dddddd; margin-bottom:30px;}
+    .grid-cursos {display:grid; grid-template-columns:repeat(auto-fit,minmax(300px,1fr)); gap:25px; margin-top:30px; max-width:1200px; margin-left:auto; margin-right:auto;}
+    .curso-card {background:#1a1a1a; border:2px solid #ff4c00; border-radius:12px; padding:25px; text-align:center; transition:0.3s;}
+    .curso-card h3 {color:#ff4c00; margin-bottom:15px;}
+    .curso-card p {color:#cccccc; margin-bottom:15px; font-size:0.95rem;}
+    .curso-card button {background:#ff4c00; color:#000; border:none; padding:12px 20px; border-radius:8px; font-weight:700; cursor:pointer;}
+    .curso-card button:hover {background:#b71c1c; color:#fff;}
+    .modal {display:none; position:fixed; z-index:1000; left:0; top:0; width:100%; height:100%; overflow:auto; background-color: rgba(0,0,0,0.8);}
+    .modal-content {background:#1a1a1a; margin:10% auto; padding:30px; border:2px solid #ff4c00; border-radius:12px; max-width:600px; color:#fff; text-align:center; position:relative;}
+    .modal-content h3 {color:#ff4c00; margin-bottom:15px;}
+    .modal-content p {margin-bottom:20px; color:#cccccc;}
+    .close {position:absolute; top:15px; right:20px; color:#ff4c00; font-size:28px; font-weight:bold; cursor:pointer;}
+    .close:hover {color:#b71c1c;}
+    footer {background:#111; text-align:center; padding:25px; margin-top:50px; color:#aaaaaa; font-size:0.9rem;}
+  </style>
 </head>
 <body>
 
 <header>
   <img src="assets/logo.png" alt="Logo ISMAA">
   <h1>Capacitaciones Virtuales</h1>
-  <nav>
-    <a href="index.html">Inicio</a>
-  </nav>
+  <p>Explorá nuestros cursos y master class en prevención de siniestros e incendios. Contenido 100% virtual, con certificación, evaluación y acceso a comunidad exclusiva. Aprendé con los mejores especialistas y potenciá tu desarrollo profesional.</p>
 </header>
 
-<section>
-  <h2>Seleccione una opción</h2>
-  <div style="text-align:center;">
-    <a class="btn" href="masterclass.html">MASTER CLASS</a>
-    <a class="btn" href="cursos.html">CURSOS VIRTUALES</a>
+<section class="grid-cursos">
+
+  <!-- MASTER CLASS BATERÍAS DE ION-LITIO Nivel I -->
+  <div class="curso-card">
+    <h3>MASTER CLASS BATERÍAS DE ION-LITIO Nivel I</h3>
+    <p>Aprendé desde lo básico sobre seguridad y manejo de baterías de ion-litio, prevención de riesgos y protocolos de emergencia. Ideal para profesionales y estudiantes que comienzan en el sector.</p>
+    <button onclick="abrirModal('MASTER CLASS BATERÍAS DE ION-LITIO Nivel I',25000)">¡Comenzar a Aprender!</button>
   </div>
+
+  <!-- MASTER CLASS BATERÍAS DE ION-LITIO Nivel II -->
+  <div class="curso-card">
+    <h3>MASTER CLASS BATERÍAS DE ION-LITIO Nivel II</h3>
+    <p>Profundizá en técnicas avanzadas de prevención y manejo seguro de baterías de ion-litio. Aprende a gestionar riesgos complejos y garantizar la seguridad de instalaciones y personas.</p>
+    <button onclick="abrirModal('MASTER CLASS BATERÍAS DE ION-LITIO Nivel II',25000)">¡Comenzar a Aprender!</button>
+  </div>
+
+  <!-- MASTER CLASS MATERIALES QUÍMICOS PELIGROSOS -->
+  <div class="curso-card">
+    <h3>MASTER CLASS MATERIALES QUÍMICOS PELIGROSOS</h3>
+    <p>Conocé las normativas, procedimientos y protocolos de seguridad en el manejo de sustancias químicas peligrosas. Aprende a minimizar riesgos y prevenir accidentes en tu lugar de trabajo.</p>
+    <button onclick="abrirModal('MASTER CLASS MATERIALES QUÍMICOS PELIGROSOS',25000)">¡Comenzar a Aprender!</button>
+  </div>
+
+  <!-- MASTER CLASS PRIMER INTERVENTOR EN INCENDIOS -->
+  <div class="curso-card">
+    <h3>MASTER CLASS PRIMER INTERVENTOR EN INCENDIOS</h3>
+    <p>Capacitate para intervenir de forma segura y eficiente ante incendios, con técnicas prácticas y conocimiento teórico indispensable para la primera respuesta.</p>
+    <button onclick="abrirModal('MASTER CLASS PRIMER INTERVENTOR EN INCENDIOS',25000)">¡Comenzar a Aprender!</button>
+  </div>
+
+  <!-- MASTER CLASS CÓMO PENSAR LA EMERGENCIA -->
+  <div class="curso-card">
+    <h3>MASTER CLASS CÓMO PENSAR LA EMERGENCIA</h3>
+    <p>Desarrollá la capacidad de análisis y planificación frente a emergencias, aprendiendo a tomar decisiones rápidas y seguras en situaciones críticas.</p>
+    <button onclick="abrirModal('MASTER CLASS CÓMO PENSAR LA EMERGENCIA',25000)">¡Comenzar a Aprender!</button>
+  </div>
+
+  <!-- CURSO DE PREVENCIÓN DE INCENDIOS -->
+  <div class="curso-card">
+    <h3>CURSO DE PREVENCIÓN DE INCENDIOS</h3>
+    <p>Aprendé todo lo necesario para identificar riesgos, implementar medidas preventivas y garantizar la seguridad de espacios residenciales e industriales.</p>
+    <button onclick="abrirModal('CURSO DE PREVENCIÓN DE INCENDIOS',200000)">¡Comenzar a Aprender!</button>
+  </div>
+
+  <!-- CURSO MATERIALES QUÍMICOS PELIGROSOS -->
+  <div class="curso-card">
+    <h3>CURSO MATERIALES QUÍMICOS PELIGROSOS</h3>
+    <p>Capacitate en el manejo seguro de sustancias químicas peligrosas, cumpliendo normativas y previniendo accidentes laborales y ambientales.</p>
+    <button onclick="abrirModal('CURSO MATERIALES QUÍMICOS PELIGROSOS',200000)">¡Comenzar a Aprender!</button>
+  </div>
+
+  <!-- CURSO BRIGADISTA INDUSTRIAL -->
+  <div class="curso-card">
+    <h3>CURSO BRIGADISTA INDUSTRIAL</h3>
+    <p>Formate como brigadista industrial y aprendé a actuar frente a incendios y emergencias dentro de entornos industriales, siguiendo protocolos profesionales y seguros.</p>
+    <button onclick="abrirModal('CURSO BRIGADISTA INDUSTRIAL',200000)">¡Comenzar a Aprender!</button>
+  </div>
+
 </section>
 
+<!-- MODAL -->
+<div id="modal" class="modal">
+  <div class="modal-content">
+    <span class="close" onclick="cerrarModal()">&times;</span>
+    <h3 id="modal-nombre"></h3>
+    <p id="modal-descripcion"></p>
+    <p id="modal-precio"></p>
+    <a id="modal-whatsapp" class="btn-rojo" href="#" target="_blank">¡Comenzar a Aprender!</a>
+  </div>
+</div>
+
+<script>
+  function abrirModal(nombre, precio){
+    document.getElementById('modal').style.display='block';
+    document.getElementById('modal-nombre').textContent = nombre;
+    document.getElementById('modal-descripcion').textContent = 'Curso 100% virtual, con certificación oficial, evaluación final y acceso a nuestra comunidad exclusiva. Aprendé con profesionales y potenciá tu carrera.';
+    document.getElementById('modal-precio').textContent = 'Precio: $' + precio.toLocaleString();
+    var modalWhatsapp = document.getElementById('modal-whatsapp');
+    modalWhatsapp.href = `https://wa.me/5491131779229?text=Quiero inscribirme al curso: ${encodeURIComponent(nombre)}`;
+  }
+
+  function cerrarModal(){
+    document.getElementById('modal').style.display='none';
+  }
+
+  window.onclick = function(event){
+    if(event.target==document.getElementById('modal')){
+      cerrarModal();
+    }
+  }
+</script>
+
 <footer>
-  © 2025 ISMAA SERVICIOS
+  © 2025 ISMAA SERVICIOS — Centro de capacitación y profesionalización
 </footer>
 
 </body>
